@@ -3,7 +3,7 @@
 [Моя реализация](https://github.com/RomanVas30/List)
 
 ## Java:
-
+```java
 class ListElement {
     ListElement next;    
     int data;            
@@ -12,8 +12,9 @@ class ListElement {
 class List {
     private ListElement head;       
     private ListElement tail;      
- 
+```
 > Добавить спереди
+```java
     void addFront(int data)           
     {
         ListElement a = new ListElement();  
@@ -29,8 +30,9 @@ class List {
             head = a;              
         }
     }
- 
+ ```
 > Добавление в конец списка
+```java
     void addBack(int data) {          
         ListElement a = new ListElement();  
         a.data = data;
@@ -43,8 +45,9 @@ class List {
             tail = a;               
         }
     }
- 
+ ```
  > Печать списка
+ ```java
     void printList()                
     {
         ListElement t = head;         
@@ -55,8 +58,9 @@ class List {
         }
     }
  
- 
+ ```
 > Удаление элемента
+```java
     void delEl(int data)          
     {
         if(head == null)       
@@ -87,9 +91,9 @@ class List {
         }
     }
 }
-
+```
 ## Python:
-
+```Python
 class Node:
     def __init__(self, value = None, next = None):
         self.value = value
@@ -117,8 +121,9 @@ class LinkedList:
  
     def clear(self):
         self.__init__()
-
+```
 > Функция для определения длины списка:
+```Python
 def Len(self):
     self.length =0
     if self.first != None:
@@ -128,16 +133,18 @@ def Len(self):
             current = current.next
             self.length +=1
     return self.length
-
+```
 > Добавление элементов в начало списка:
+```Python
 def Push(self, x):
     if self.first == None:
         self.first = Node(x,None)
         self.last = self.first
     else:
         self.first = Node(x,self.first)
-
+```
 > Добавление элементов в конец списка:
+```Python
 def add(self, x):
     if self.first == None:
         self.first = Node(x, None)
@@ -149,8 +156,9 @@ def add(self, x):
         current = Node(x, None)
         self.last.next = current
         self.last = current
-
+```
 > Вставка элемента в список:
+```Python
 def InsertNth(self,i,x):
     if (self.first == None):
         self.first = Node(x,self.first)
@@ -168,8 +176,9 @@ def InsertNth(self,i,x):
             self.last = curr.next
           break
         curr = curr.next
-
+```
 > Удаление головы:
+```Python
 def Pop(self):
     oldhead=self.first
     if oldhead==None:
@@ -178,8 +187,9 @@ def Pop(self):
     if self.first==None:
         self.last=None
     return oldhead.value
-
+```
 > Удаление элемента из списка:
+```Python
 def Del(self,i):
     if (self.first == None):
       return
@@ -199,8 +209,9 @@ def Del(self,i):
         old = curr  
         curr = curr.next
         count += 1
-
+```
 > Вставка элемента в отсортированный список:
+```Python
 def SortedInsert(self,x):
     if (self.first == None):
       self.first = Node(x,self.last)
@@ -218,8 +229,9 @@ def SortedInsert(self,x):
         curr = curr.next
     curr = Node(x,None)        
     old.next = curr
-
+```
 > Удаление повторяющихся значений:
+```Python
 def RemoveDuplicates(self):
     if (self.first == None):
         return
@@ -232,3 +244,4 @@ def RemoveDuplicates(self):
               _del = 1
         if _del == 0:
           curr = curr.next
+```
