@@ -273,7 +273,6 @@ template <typename _Key, typename _Tp,
   public void startElement(String uri, String Sname,
 	String qname, Attributes attr)throws SAXException
     {
-           // Обработка события на начало тэга 
      	if(qname.equals("groupnode"))
           {
             try {
@@ -284,8 +283,6 @@ template <typename _Key, typename _Tp,
                 enabled =    new Boolean(attr.getValue("enabled")).booleanValue(); 
                 parameter =   new Boolean(attr.getValue("parameter")).booleanValue(); 
                 nameNode =  attr.getValue("namenode") ;
-                // Создаем экземпляр классаGroupNode...
-                //проверяем есть ли запрос с параметром
                 if(parameter)
                 {   
                           nameField = attr.getValue("nameField");
@@ -309,13 +306,10 @@ template <typename _Key, typename _Tp,
 listGroupNode = treeHandler.getListGroupNode();
        for (Object elem : listGroupNode) 
           {
-            // проверяем загруженный список на наличие корневых нод
             if(javax.swing.tree.TreeNode.class.equals(((GroupNode) elem).getParentObj()))
             {
                 root.add((GroupNode) elem);
-             // проверяем есть ли запросы с параметром
              if(((GroupNode) elem).isParameter()){
-                     // если есть проверяем какого типа параметр
                  if(((GroupNode) elem).getTypeField().equals("String"))
                      this.createNode((GroupNode) elem,queryDB.getParamColNto(
 							((GroupNode) elem).getBaseObject(),
@@ -360,10 +354,8 @@ void fillGroupNode(GroupNode groupNode,DefaultMutableTreeNode dmtn)
                if(tmpGroupNode.getParNameNode().equals(groupNode.toString()))
             {
                 try{
-                  // Определяем базовую бизнес сущность для узла группировки
                  if( tmpGroupNode.getParentObj() = = ntoL.getNameCls())
                       {
-                     // Создание класса по шаблону
                        GroupNode realGroupNode =(GroupNode)tmpGroupNode.clone();
                        dmtn.add(realGroupNode);
                        fillNodeTree(realGroupNode, ntoL);
