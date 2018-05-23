@@ -10,7 +10,7 @@
 * <https://github.com/mrfratello/SortLinkedList>
 * <https://github.com/mapstruct/mapstruct>
 * <https://github.com/redisson/redisson>
-* <https://github.com/Karpikova/simply_connected_list/tr..>
+* <https://github.com/Karpikova/simply_connected_list/tree/master/src>
 * <https://github.com/sherxon/AlgoDS>
 
 ## Примеры использования в Python:
