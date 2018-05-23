@@ -47,7 +47,7 @@ public void addElement(E element) {
     	}
 ```
 > Удаление узла:
-'''java
+```java
 public E removeElement(E element) {
         int index = getElementHash(element);
         Node node = nodes[index];
@@ -153,7 +153,7 @@ private Node connectNodes(Node parent, Node node) {
         }
 ```
 ## Python:
-```
+```java
 class TreeNode:
     def __init__(self,key,val,left=None,right=None,parent=None):
         self.key = key
