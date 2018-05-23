@@ -153,7 +153,7 @@ private Node connectNodes(Node parent, Node node) {
         }
 ```
 ## Python:
-```java
+```Python
 class TreeNode:
     def __init__(self,key,val,left=None,right=None,parent=None):
         self.key = key
