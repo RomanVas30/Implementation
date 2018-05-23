@@ -1,7 +1,7 @@
 ## С++:
 
 > Пример реализации класса multimap из STL
-```Shellsession
+```gcc
 template <typename _Key, typename _Tp,
 	    typename _Compare = std::less<_Key>,
 	    typename _Alloc = std::allocator<std::pair<const _Key, _Tp> > >
